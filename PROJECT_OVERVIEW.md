@@ -226,61 +226,36 @@ This project demonstrates the ability to:
 
 ---
 
-## 📊 **Sample Analytics Queries**
+## 📊 **Project Results & Business Insights**
 
-### **Customer Lifetime Value**
-```sql
-select
-    customer_id,
-    first_name || ' ' || last_name as customer_name,
-    number_of_orders,
-    total_lifetime_value,
-    avg_order_value
-from {{ ref('customers') }}
-where number_of_orders > 5
-order by total_lifetime_value desc
-limit 10
-```
+### **Data Scale & Performance**
+- **Total Orders**: 2,088,006 orders over 6 years (2016-2022)
+- **Total Customers**: 3,102 unique customers
+- **Order Items**: 3,024,215 individual items sold
+- **Average Orders per Day**: ~950 orders/day
+- **Peak Performance**: [Identify highest revenue periods from your data]
+
+### **Revenue Analysis**
+- **Total Revenue**: [Calculate from your order_total data]
+- **Average Order Value**: [Calculate from your data]
+- **Growth Trends**: [Year-over-year growth analysis]
+
+### **Customer Segmentation**
+- **High Value Customers**: [Customers with >$X total spent]
+- **Purchase Frequency**: Frequent, Regular, Occasional, One-time buyers
+- **Customer Lifecycle**: Active, At Risk, Dormant, Churned segments
 
 ### **Product Performance**
-```sql
-select
-    product_name,
-    product_type,
-    total_orders,
-    total_revenue,
-    avg_order_size
-from {{ ref('products') }}
-order by total_revenue desc
-```
+- **Top Performing Products**: [Identify best sellers]
+- **Category Analysis**: Food vs Beverage performance comparison
+- **Profitability Metrics**: Products with highest margins
+- **Product Lifecycle**: New, Growing, Established, Long-term products
 
----
-
-## 🎯 **Resume Bullet Points**
-
-```
-dbt Analytics Transformation Pipeline - Jaffle Shop
-github.com/mushroomHater/jaffle-shop-project
-
-• Architected end-to-end dbt transformation pipeline with 12+ SQL models 
-  organized in staging and mart layers following dimensional modeling 
-  best practices and Kimball methodology
-
-• Implemented comprehensive data quality framework with 20+ automated tests 
-  achieving 100% test coverage for uniqueness, referential integrity, 
-  and business logic validation across all models
-
-• Created self-documenting analytics codebase with YAML-based metadata, 
-  automated lineage tracking, and interactive data dictionary enabling 
-  stakeholder self-service
-
-• Established version-controlled analytics workflow using Git, dbt Cloud, 
-  and pre-commit hooks for collaborative, production-grade data 
-  transformations
-
-Technologies: dbt Cloud, SQL (CTEs, Window Functions, Joins), Git, 
-YAML, Data Modeling, Dimensional Modeling, Data Testing, Documentation
-```
+### **Operational Insights**
+- **Seasonal Patterns**: [Identify peak seasons]
+- **Store Performance**: [Compare store metrics]
+- **Supply Chain**: [Cost analysis and optimization opportunities]
+- 
 
 ---
 
@@ -330,8 +305,6 @@ YAML, Data Modeling, Dimensional Modeling, Data Testing, Documentation
    dbt docs serve
    ```
 
-**See [SETUP_INSTRUCTIONS.md](SETUP_INSTRUCTIONS.md) for detailed setup guide.**
-
 ---
 
 ## 📚 **Learning Resources**
@@ -340,15 +313,6 @@ YAML, Data Modeling, Dimensional Modeling, Data Testing, Documentation
 - **dbt Learn Platform**: https://learn.getdbt.com/
 - **Original Jaffle Shop**: https://github.com/dbt-labs/jaffle-shop
 - **dbt Community Slack**: https://www.getdbt.com/community/
-
----
-
-## 🔗 **Related Projects**
-
-This project pairs perfectly with:
-- **[Large-Scale Analytics Platform](https://github.com/mushroomHater/large-scale-analytics-platform)** - Multi-source data extraction (1.3M+ records)
-
-**Together they demonstrate**: Complete analytics engineering lifecycle from data extraction through transformation to business insights.
 
 ---
 
